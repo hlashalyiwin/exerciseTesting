@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> <%= title %> </h1>
+    <form class="" action="/users/update" method="post">
+        <input type="hidden" name="id" value="<%= user._id %>">
+        <label for="name">User Name</label>
+        <input type="text" name="name" id="name" value="<%= user.name %>"><p>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" value="<%= user.email %>"><p>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" value="<%= user.password %>"><p>
+        <input type="submit" name="submit" value="update">
+    </form>
+  </body>
+</html>

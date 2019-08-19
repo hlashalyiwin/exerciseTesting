@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><%= title %> </h1>
+    Name: <%= user.name %> <p>
+    Email: <%= user.email %> <p>
+    Password: <%= user.password %> <p>
+  <!-- <table>
+      <thead>
+        <th>Name</th>
+        <th>Email:</th>
+        <th>Password:</th>
+      </thead>
+      <tbody>
+        <% for(var i=0; i<user.length;i++){ %>
+          <tr>
+            <td><%= user[i].name %></td>
+            <td><%= user[i].email %></td>
+            <td><%= user[i].password %></td>
+          </tr>
+        <% } %>
+
+      </tbody>
+    </table> -->
+  <a href="/users/userUpdate/<%= user._id %>"><button type="button" name="button">Update</button></a>
+  <button type="button" name="button" onclick="del();">Delete</button>
+  </body>
+  <script type="text/javascript">
+    function del() {
+      var co = confirm('Are u sure?');
+      if(co){
+        location.href = "/users/userDelete/<%= user._id %>";
+      }
+    }
+  </script>
+</html>
